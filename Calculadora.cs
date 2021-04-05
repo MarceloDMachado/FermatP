@@ -7,9 +7,26 @@ namespace FermatP
     static class Calculadora
     {
         //Próximo Passo: Criar overrides para aceitar outros tipos de inteiros como int16, int32...
-        public static ulong somarPotencias(ulong a, ulong b, ulong c)
+        public static ulong somarPotencias(List<ulong> listaPotencias)
         {
-            return a + b + c;
+            ulong somaDasPotencias = 0;
+            foreach(ulong potencia in listaPotencias)
+            {
+                somaDasPotencias += potencia;
+            }
+            return somaDasPotencias;
+        }
+
+        public static string somarAlgarismos(char[] algarismos)
+        {
+            int somaDosAlgarismos = 0;
+
+            foreach(char c in algarismos)
+            {
+                somaDosAlgarismos += (int)Char.GetNumericValue(c);
+            }
+            
+            return "" + somaDosAlgarismos;
         }
     }
 }

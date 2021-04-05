@@ -12,12 +12,12 @@ namespace FermatP
         public Exponenciacao(Byte _base)
         {
             this.Base = _base;
-            this.Potencia = 1;
         }
 
         public void setExpoente(Byte _expoente)
         {
             this.Expoente = _expoente;
+            this.Potencia = 1;
             calcPotencia();
         }
 
