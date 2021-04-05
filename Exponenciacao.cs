@@ -14,14 +14,14 @@ namespace FermatP
             this.Base = _base;
         }
 
-        public void setExpoente(Byte _expoente)
+        public void SetExpoente(Byte _expoente)
         {
             this.Expoente = _expoente;
             this.Potencia = 1;
-            calcPotencia();
+            CalcPotencia();
         }
 
-        private void calcPotencia()
+        private void CalcPotencia()
         {
             Byte byte0 = 0;
             Byte byte1 = 1;
@@ -29,14 +29,9 @@ namespace FermatP
 
             while (_expoente > byte0)
             {
-                this.Potencia = multiplicar(this.Potencia);
+                this.Potencia = Calculadora.multiplicar(this.Potencia, this.Base);
                 _expoente -= byte1;
             }
-        }
-
-         private ulong multiplicar(ulong _potencia)
-        {
-            return _potencia * this.Base;
         }
 
         public override string ToString()

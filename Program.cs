@@ -12,10 +12,10 @@ namespace FermatP
             Byte looping = 1;
             do
             {
-                Teorema.setExpoente(looping);
+                Teorema.SetExpoente(looping);
                 Console.WriteLine(Teorema);
                 looping += 1;
-            } while (looping < 255);
+            } while (looping < Byte.MaxValue);
         }
     }
 }

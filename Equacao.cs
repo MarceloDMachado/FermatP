@@ -20,22 +20,22 @@ namespace FermatP
             this.C = new Exponenciacao(_baseC);
         }
 
-        public void setExpoente(Byte _expoente)
+        public void SetExpoente(Byte _expoente)
         {
             this.ExpoenteGeral = _expoente;
-            recalcularPotencias();
+            RecalcularPotencias();
         }
 
-        private void recalcularPotencias()
+        private void RecalcularPotencias()
         {
-            A.setExpoente(this.ExpoenteGeral);
-            B.setExpoente(this.ExpoenteGeral);
-            C.setExpoente(this.ExpoenteGeral);
-            somarPotencias();
+            A.SetExpoente(this.ExpoenteGeral);
+            B.SetExpoente(this.ExpoenteGeral);
+            C.SetExpoente(this.ExpoenteGeral);
+            SomarPotencias();
             VerificarSeResultaEmNove();
         }
 
-        private void somarPotencias()
+        private void SomarPotencias()
         {
             SomaDasPotencias = Calculadora.somarPotencias(new List<ulong> { A.Potencia, B.Potencia, C.Potencia });
         }

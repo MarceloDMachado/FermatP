@@ -28,5 +28,10 @@ namespace FermatP
             
             return "" + somaDosAlgarismos;
         }
+
+        public static ulong multiplicar(ulong _potencia, Byte _base)
+        {
+            return _potencia * _base;
+        }
     }
 }
